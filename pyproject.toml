@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "python-timezone-schedular"
+version = "0.1.0"
+description = "Schedule a job at the same time in many timezones"
+authors = ["Quinten Cabo <tintin10q@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytz = "^2023.4"
+schedule = "^1.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
