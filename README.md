@@ -24,7 +24,7 @@ import schedule, time
 result = get_local_time_for_remote_time("Europe/Amsterdam","Brazil/West", "12:00")
 hours = result.strftime("%H:%M")
 job = lambda : print(hours)
-schedule.every().day.at(hours).do(job)
+schedule.every().day.at(hours).do(job, hours)
 
 while True:
     schedule.run_pending()
