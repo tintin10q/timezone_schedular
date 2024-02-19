@@ -1,3 +1,3 @@
 
 
-from schedule_timezone import get_local_time_for_remote_time_alpha2, get_local_time_for_remote_time
+from .schedule_timezone import get_local_time_for_remote_time_alpha2, get_local_time_for_remote_time
