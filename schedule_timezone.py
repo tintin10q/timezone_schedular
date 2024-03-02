@@ -17,6 +17,8 @@ def get_local_time_for_remote_time_alpha2(local_country_2alpha: str, remote_coun
     execute_time = dt.datetime.strptime(time_to_run_remote_time, "%H:%M")  # Time to execute the task in the local time, this time does not have a timezone yet
     # Get the local time into the desired timezone
     remote_timezone_name = pytz.country_timezones[remote_country_2alpha][0]
+    # if remote_country_2alpha == "US": # Its new york
+    #     print(remote_timezone_name)
     remote_timezone = pytz.timezone(remote_timezone_name)
     remote_time = dt.datetime.now(remote_timezone)
     remote_time = remote_time.replace(hour=execute_time.hour, minute=execute_time.minute)
